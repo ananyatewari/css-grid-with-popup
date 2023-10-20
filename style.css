@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+*{
+    font-family: "Nunito";
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color:#96623d92;
+
+}
+
+@keyframes glow {
+    from{
+        text-shadow: 2px 4px 5px rgb(246, 200, 114);
+    }
+    to{
+        text-shadow: 5px 8px 15px white;
+    }
+    
+}
+
+h1{
+    font-size: 50px;
+    animation: glow 1s ease-in infinite alternate;
+
+}
+
+header{
+    background-image: url("https://i.pinimg.com/564x/60/30/02/603002287c9744170d9d0927cb722eba.jpg");
+    height: 200px;
+    background-repeat:round;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    
+}
+
+header:hover{
+    box-shadow: 2px 2px 50px 1px rgb(98, 88, 44);
+    transition-duration: 0.5s;
+    transform: scale(1.01);
+}
+
+#gallery, #cat{
+    cursor: pointer;
+    font-variant: small-caps;
+    margin-left: 70px;
+    margin-right: 125px;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 110px;
+    font-size: small;
+    text-align: center;
+    color: black;
+}
+
+#gallery:hover, #cat:hover{
+
+    padding: 3px;
+    background-color: rgba(255, 255, 255, 0.523);
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.box1{
+    box-sizing: border-box;
+    display: grid;
+    justify-content: space-around;
+    row-gap: 10px;
+    column-gap: 1px;
+    z-index: 0;
+}
+
+#pic3{
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.box1 img{
+    box-shadow: 0px 0px 10px 3px #572c0e;
+    border-radius: 30px;
+}
+
+.box1 img:hover{
+    transform: scale(1.08);
+    transition-duration: 0.8s;
+    z-index: 0;
+}
+
+#concert-popup{
+    z-index: 1;
+    display: grid;
+}
+
+#pop1, #pop2{
+    display: grid;
+    row-gap: 0px;
+    column-gap: 0px;
+    background-color: #000000;
+    padding: 40px;
+    position: fixed;
+    top: 200px;
+    bottom: 260px;
+    left: 100px;
+    right: 100px;
+    z-index: 3;
+}
+
+#poppic3{
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+}
+
+#poppic7{
+    grid-row: 3 / 4;
+}
+
+span .close{
+    float: left;
+}
+
+#close{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    display: none;
+}
